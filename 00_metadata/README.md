@@ -1,6 +1,6 @@
-Data is from [GSE137482](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137482)  
+Data is from [GSE137482](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137482).  
 
-I only selected 6 SRR IDs to compare the difference between 18-month mouse subjected to permanent middle cerebral artery occlusion (MCAO) and the control group.
+I only selected 6 samples  to compare the difference between 18-month mouse subjected to permanent middle cerebral artery occlusion (MCAO) and the control group.
 
 | SRR         | Source Name |
 | ------------- | ------------- |
