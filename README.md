@@ -160,11 +160,11 @@ down-regulated: log2FC\<-1).
 
 <img src="./04_report/figure/Figure-3.png" id="fig-differential" /> 
 
-> **Figure 3** \| **Differential Gene Expression Analysis**. **(A) ** Differences in the
+> **Figure 3** \| **Differential Gene Expression Analysis**. **(A)** Differences in the
 number of up-regulated and down-regulated genes between MAO and control
-mice (up-regulated: log2FC\>1, down-regulated: log2FC\<-1). **(B) **
+mice (up-regulated: log2FC\>1, down-regulated: log2FC\<-1). **(B)**
 Volcano plots showing differential gene expression between MAO and
-control mice. **(C) ** Heatmap showing significantly differentially
+control mice. **(C)** Heatmap showing significantly differentially
 expressed genes between MAO and control mice (\|log2FC\|\>1; p-value
 \<0.05).
 
