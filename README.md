@@ -32,7 +32,7 @@ RNA-seq Analysis of Ischemic Stroke in Aged Mouse Brain
     transport</a>
 - <a href="#discussion" id="toc-discussion"><span
   class="toc-section-number">5</span> Discussion</a>
-- <a href="#bibliography" id="toc-bibliography">参考文献</a>
+- <a href="#bibliography" id="toc-bibliography">Reference</a>
 
 # Abstract
 
@@ -219,7 +219,7 @@ and Gene Co-expression Network Analysis (WGCNA) has not been conducted.
 I hope there will be time to further study and improve the analysis
 ability of bioinfomatics in the future.
 
-# 参考文献
+# Reference
 
 <div id="refs" class="references csl-bib-body">
 

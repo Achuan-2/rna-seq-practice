@@ -5,7 +5,7 @@ toc: true
 number-sections: true
 shift-heading-level-by: -1
 bibliography: references.bib
-reference-section-title: "参考文献"
+reference-section-title: "References"
 cite-method: citeproc # biblatex, citeproc
 csl: "gb-t-7714-2015-numeric-bilingual-no-uppercase-no-url-doi.csl"
 link-citations: true  # 设置正文引用可以超链接到参考文献表中相应的条目，默认为 false，当然true啦
