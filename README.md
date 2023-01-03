@@ -48,7 +48,7 @@ inflammatory cascade response in aged post-stroke, which may provide new
 insights into the transcriptional response to ischemic stroke.
 
 ![](./04_report/figure/Figure-1.pipeline.png) 
-> Figure 1 \| **Workflow**. The
+> **Figure 1** \| **Workflow**. The
 overall process of this project, from upstream data processing to
 downstream functional analysis.
 
@@ -144,7 +144,8 @@ overall gene expression of the MAO (middle cerebral artery occlusion)
 group could be distinguished from those of control group.
 
 <img src="./04_report/figure/Figure-2.png" id="fig-overview" /> 
-> Figure 2 \| **Data Overview**. **(A)** PCA plot showing global similarity of genes
+
+> **Figure 2** \| **Data Overview**. **(A)** PCA plot showing global similarity of genes
 expression in control and MCAO samples. **(B)** Cluster Dendrogram based
 on Pearson distance showing similarity among control and MCAO samples.
 
@@ -159,7 +160,7 @@ down-regulated: log2FC\<-1).
 
 <img src="./04_report/figure/Figure-3.png" id="fig-differential" /> 
 
-> Figure 3 \| **Differential Gene Expression Analysis**. **(A) ** Differences in the
+> **Figure 3** \| **Differential Gene Expression Analysis**. **(A) ** Differences in the
 number of up-regulated and down-regulated genes between MAO and control
 mice (up-regulated: log2FC\>1, down-regulated: log2FC\<-1). **(B) **
 Volcano plots showing differential gene expression between MAO and
@@ -182,8 +183,7 @@ channels et al., were downregulated (**?@fig-go**).
 
 <img src="./04_report/figure/Figure-4.png" id="fig-go" /> 
 
-> Figure 4 \| **Gene
-Ontology Enrichment Analysis**. **(A)** Enrichment Map for enrichment
+> **Figure 4** \| **Gene Ontology Enrichment Analysis**. **(A)** Enrichment Map for enrichment
 result of up-regulated genes in MAO mice. **(B)** Enrichment Map for
 enrichment result of down-regulated genes in MAO mice. **(C)**
 Gene-Category Network for enrichment result of up-regulated genes in MAO
