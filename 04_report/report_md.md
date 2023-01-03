@@ -47,9 +47,13 @@ neurotransmitter transport and synaptic plasticity, with upregulation of
 inflammatory cascade response in aged post-stroke, which may provide new
 insights into the transcriptional response to ischemic stroke.
 
-![**Workflow**. The overall process of this project, from upstream data
-processing to downstream functional
-analysis.](./figure/Figure-1.pipeline.png)
+<figure>
+<img src="./figure/Figure-1.pipeline.png" id="fig-pipeline"
+alt="Figure 1| Workflow. The overall process of this project, from upstream data processing to downstream functional analysis." />
+<figcaption aria-hidden="true"><strong>Figure 1| Workflow</strong>. The
+overall process of this project, from upstream data processing to
+downstream functional analysis.</figcaption>
+</figure>
 
 # Introduction
 
@@ -95,7 +99,7 @@ experimental and three control sample respectively (
 | SRR10123787 | MCAO_18M_B | MCAO  |
 | SRR10123788 | MCAO_18M_C | MCAO  |
 
-Table 1: **Selected raw data for RNA-seq analysis**
+**Table 1\| Selected raw data for RNA-seq analysis**
 
 </div>
 
@@ -138,14 +142,14 @@ analysis are deposited to the GitHub repository website
 
 To provide an overview of the data, Principal Component Analysis (PCA)
 and hierarchical clustering analysis were performed. As can be seen in
-[Figure 1](#fig-overview), the distances between groups were closer and
+[Figure 2](#fig-overview), the distances between groups were closer and
 the overall gene expression of the MAO (middle cerebral artery
 occlusion) group could be distinguished from those of control group.
 
 <figure>
 <img src="./figure/Figure-2.png" id="fig-overview"
-alt="Figure 1: Data Overview. (A) PCA plot showing global similarity of genes expression in control and MCAO samples. (B) Cluster Dendrogram based on Pearson distance showing similarity among control and MCAO samples." />
-<figcaption aria-hidden="true">Figure 1: <strong>Data Overview</strong>.
+alt="Figure 2| Data Overview. (A) PCA plot showing global similarity of genes expression in control and MCAO samples. (B) Cluster Dendrogram based on Pearson distance showing similarity among control and MCAO samples." />
+<figcaption aria-hidden="true"><strong>Figure 2| Data Overview</strong>.
 <strong>(A)</strong> PCA plot showing global similarity of genes
 expression in control and MCAO samples. <strong>(B)</strong> Cluster
 Dendrogram based on Pearson distance showing similarity among control
@@ -154,7 +158,7 @@ and MCAO samples.</figcaption>
 
 ## Ischemic aged mice have a large number of upregulated genes
 
-As is shown in [Figure 2](#fig-differential), after differential gene
+As is shown in [Figure 3](#fig-differential), after differential gene
 expression analysis of genes between groups, 1,551 differential genes
 were found in MAO mice compared to control mice (\|log2FC\|\>1; p-value
 \< 0.05). Moreover, the number of up-regulated genes was significantly
@@ -163,8 +167,8 @@ down-regulated: log2FC\<-1).
 
 <figure>
 <img src="./figure/Figure-3.png" id="fig-differential"
-alt="Figure 2: Differential Gene Expression Analysis. (A) Differences in the number of up-regulated and down-regulated genes between MAO and control mice (up-regulated: log2FC&gt;1, down-regulated: log2FC&lt;-1). (B) Volcano plots showing differential gene expression between MAO and control mice. (C) Heatmap showing significantly differentially expressed genes between MAO and control mice (|log2FC|&gt;1; p-value &lt;0.05)." />
-<figcaption aria-hidden="true">Figure 2: <strong>Differential Gene
+alt="Figure 3| Differential Gene Expression Analysis. (A) Differences in the number of up-regulated and down-regulated genes between MAO and control mice (up-regulated: log2FC&gt;1, down-regulated: log2FC&lt;-1). (B) Volcano plots showing differential gene expression between MAO and control mice. (C) Heatmap showing significantly differentially expressed genes between MAO and control mice (|log2FC|&gt;1; p-value &lt;0.05)." />
+<figcaption aria-hidden="true"><strong>Figure 3| Differential Gene
 Expression Analysis</strong>. <strong>(A)</strong> Differences in the
 number of up-regulated and down-regulated genes between MAO and control
 mice (up-regulated: log2FC&gt;1, down-regulated: log2FC&lt;-1).
@@ -185,12 +189,12 @@ interactions (such as extraceller matrix organization, extraceller
 structure organization, cell subtract adhesion), cell migration (such as
 leukocyte migration, ameboidal type cell migration). On the other hand,
 gene associated with neurotransmitter transport and potassium ion
-channels et al., were downregulated ([Figure 3](#fig-go)).
+channels et al., were downregulated ([Figure 4](#fig-go)).
 
 <figure>
 <img src="./figure/Figure-4.png" id="fig-go"
-alt="Figure 3: Gene Ontology Enrichment Analysis. (A) Enrichment Map for enrichment result of up-regulated genes in MAO mice. (B) Enrichment Map for enrichment result of down-regulated genes in MAO mice. (C) Gene-Category Network for enrichment result of up-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed. (D) Gene-Category Network for enrichment result of down-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed." />
-<figcaption aria-hidden="true">Figure 3: <strong>Gene Ontology
+alt="Figure 4| Gene Ontology Enrichment Analysis. (A) Enrichment Map for enrichment result of up-regulated genes in MAO mice. (B) Enrichment Map for enrichment result of down-regulated genes in MAO mice. (C) Gene-Category Network for enrichment result of up-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed. (D) Gene-Category Network for enrichment result of down-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed." />
+<figcaption aria-hidden="true"><strong>Figure 4| Gene Ontology
 Enrichment Analysis</strong>. <strong>(A)</strong> Enrichment Map for
 enrichment result of up-regulated genes in MAO mice.
 <strong>(B)</strong> Enrichment Map for enrichment result of

@@ -9,6 +9,8 @@ reference-section-title: "References"
 cite-method: citeproc # biblatex, citeproc
 csl: "gb-t-7714-2015-numeric-bilingual-no-uppercase-no-url-doi.csl"
 link-citations: true  # 设置正文引用可以超链接到参考文献表中相应的条目，默认为 false，当然true啦
+crossref:
+    title-delim: " | " 
 ---
 
 
@@ -16,7 +18,7 @@ link-citations: true  # 设置正文引用可以超链接到参考文献表中�
 
 An ischemic stroke occurs when the blood supply to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients, yet it is unclear what are the underlying mechanisms at the transcriptome level. To solve this problem, I perfom a RNA-seq analysis of ischemic stroke in aged (18-month-old) mouse brain, whose data were collected from the public database. Through assessing differential gene expression across injury status, it was found that downregulation of neurotransmitter transport and synaptic plasticity, with upregulation of  inflammatory cascade response in aged post-stroke, which may provide new insights into the transcriptional response to ischemic stroke.  
 
-![**Workflow**. The overall process of this project, from upstream data processing to downstream functional analysis.](./figure/Figure-1.pipeline.png)
+![**Workflow**. The overall process of this project, from upstream data processing to downstream functional analysis.](./figure/Figure-1.pipeline.png){#fig-pipeline}
 
 
 
