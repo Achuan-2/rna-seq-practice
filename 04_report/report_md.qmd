@@ -59,6 +59,7 @@ All the shell-scripts and R-scripts used to perform data processing and analysis
 To provide an overview of the data, Principal Component Analysis (PCA)  and hierarchical clustering analysis were performed. As can be seen in [@fig-overview], the distances between groups were closer and the overall gene expression of the MAO (middle cerebral artery occlusion) group could be distinguished from those of control group.
 
 ![](./figure/Figure-2.png){#fig-overview}
+
 > Figure 2 | **Data Overview**. **(A)** PCA plot showing global similarity of genes expression in control and MCAO samples. **(B)** Cluster Dendrogram based on Pearson distance showing similarity among control and MCAO samples.
 
 
@@ -68,6 +69,7 @@ To provide an overview of the data, Principal Component Analysis (PCA)  and hier
 As is shown in [@fig-differential], after differential gene expression analysis of genes between groups, 1,551 differential genes were found in MAO mice compared to control mice (|log2FC|>1; p-value < 0.05). Moreover, the number of up-regulated genes was significantly higher than that of down-regulated genes (up-regulated: log2FC>1, down-regulated: log2FC<-1).
 
 ![](./figure/Figure-3.png){#fig-differential}
+
 > Figure 3 | **Differential Gene Expression Analysis**. **(A) ** Differences in the number of up-regulated and down-regulated genes between MAO and  control mice (up-regulated: log2FC>1, down-regulated: log2FC<-1). **(B) ** Volcano plots showing differential gene expression between MAO and  control mice. **(C) ** Heatmap showing significantly differentially expressed genes between MAO and control mice (|log2FC|>1; p-value <0.05).
 
 
@@ -76,6 +78,7 @@ As is shown in [@fig-differential], after differential gene expression analysis 
 Through Gene Ontology (GO) enrichment analysis of up-regulated genes and down-regulated genes respectively, it was found that the GO Term of the up-regulated genes is significantly enriched in inflammatory response (such as regulation of immune effector process, leucocyte promotion, mononuclear cell promotion, myeloid leucocyte activation), cell-cell interactions (such as extraceller matrix organization, extraceller structure organization, cell subtract adhesion), cell migration (such as leukocyte migration, ameboidal type cell migration). On the other hand, gene associated with neurotransmitter transport and potassium ion channels et al., were downregulated ([@fig-go]).
 
 ![](./figure/Figure-4.png){#fig-go}
+
 > Figure 4 | **Gene Ontology Enrichment Analysis**. **(A)** Enrichment Map for enrichment result of up-regulated genes in MAO mice. **(B)** Enrichment Map for enrichment result of down-regulated genes in MAO mice. **(C)** Gene-Category Network for enrichment result of up-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed. **(D)** Gene-Category Network for enrichment result of down-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed.
 
 ## Discussion
