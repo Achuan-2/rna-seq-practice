@@ -49,8 +49,8 @@ insights into the transcriptional response to ischemic stroke.
 
 <figure>
 <img src="./figure/Figure-1.pipeline.png" id="fig-pipeline"
-alt="Figure 1| Workflow. The overall process of this project, from upstream data processing to downstream functional analysis." />
-<figcaption aria-hidden="true"><strong>Figure 1| Workflow</strong>. The
+alt="Figure 1 | Workflow. The overall process of this project, from upstream data processing to downstream functional analysis." />
+<figcaption aria-hidden="true"><strong>Figure 1 | Workflow</strong>. The
 overall process of this project, from upstream data processing to
 downstream functional analysis.</figcaption>
 </figure>
@@ -99,7 +99,7 @@ experimental and three control sample respectively (
 | SRR10123787 | MCAO_18M_B | MCAO  |
 | SRR10123788 | MCAO_18M_C | MCAO  |
 
-**Table 1\| Selected raw data for RNA-seq analysis**
+**Table 1 \| Selected raw data for RNA-seq analysis**
 
 </div>
 
@@ -149,7 +149,7 @@ occlusion) group could be distinguished from those of control group.
 <figure>
 <img src="./figure/Figure-2.png" id="fig-overview"
 alt="Figure 2| Data Overview. (A) PCA plot showing global similarity of genes expression in control and MCAO samples. (B) Cluster Dendrogram based on Pearson distance showing similarity among control and MCAO samples." />
-<figcaption aria-hidden="true"><strong>Figure 2| Data Overview</strong>.
+<figcaption aria-hidden="true"><strong>Figure 2 | Data Overview</strong>.
 <strong>(A)</strong> PCA plot showing global similarity of genes
 expression in control and MCAO samples. <strong>(B)</strong> Cluster
 Dendrogram based on Pearson distance showing similarity among control
@@ -167,8 +167,8 @@ down-regulated: log2FC\<-1).
 
 <figure>
 <img src="./figure/Figure-3.png" id="fig-differential"
-alt="Figure 3| Differential Gene Expression Analysis. (A) Differences in the number of up-regulated and down-regulated genes between MAO and control mice (up-regulated: log2FC&gt;1, down-regulated: log2FC&lt;-1). (B) Volcano plots showing differential gene expression between MAO and control mice. (C) Heatmap showing significantly differentially expressed genes between MAO and control mice (|log2FC|&gt;1; p-value &lt;0.05)." />
-<figcaption aria-hidden="true"><strong>Figure 3| Differential Gene
+alt="Figure 3 | Differential Gene Expression Analysis. (A) Differences in the number of up-regulated and down-regulated genes between MAO and control mice (up-regulated: log2FC&gt;1, down-regulated: log2FC&lt;-1). (B) Volcano plots showing differential gene expression between MAO and control mice. (C) Heatmap showing significantly differentially expressed genes between MAO and control mice (|log2FC|&gt;1; p-value &lt;0.05)." />
+<figcaption aria-hidden="true"><strong>Figure 3 | Differential Gene
 Expression Analysis</strong>. <strong>(A)</strong> Differences in the
 number of up-regulated and down-regulated genes between MAO and control
 mice (up-regulated: log2FC&gt;1, down-regulated: log2FC&lt;-1).
@@ -194,7 +194,7 @@ channels et al., were downregulated ([Figure 4](#fig-go)).
 <figure>
 <img src="./figure/Figure-4.png" id="fig-go"
 alt="Figure 4| Gene Ontology Enrichment Analysis. (A) Enrichment Map for enrichment result of up-regulated genes in MAO mice. (B) Enrichment Map for enrichment result of down-regulated genes in MAO mice. (C) Gene-Category Network for enrichment result of up-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed. (D) Gene-Category Network for enrichment result of down-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed." />
-<figcaption aria-hidden="true"><strong>Figure 4| Gene Ontology
+<figcaption aria-hidden="true"><strong>Figure 4 | Gene Ontology
 Enrichment Analysis</strong>. <strong>(A)</strong> Enrichment Map for
 enrichment result of up-regulated genes in MAO mice.
 <strong>(B)</strong> Enrichment Map for enrichment result of
