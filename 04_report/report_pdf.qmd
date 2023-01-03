@@ -1,0 +1,125 @@
+---
+title: "RNA-seq Analysis of Ischemic Stroke in Aged Mouse Brain"
+author:
+  - "苏济雄 22211520038"
+date: "2023.01.03"
+date-format: "YYYY.MM.DD"
+toc: true
+number-sections: true
+shift-heading-level-by: -1
+monofont: "Consolas"
+crossref:
+  chapters: true
+format: 
+  pdf:
+    # toc
+    toc-depth: 3
+    toc-title: Contents
+    # cite
+    cite-method: biblatex # biblatex,citeproc
+    bibliography: references.bib
+    biblio-title: References
+    # output
+    documentclass: article # scrartcl，article, report or book
+    papersize: a4 # a4, letter
+    colorlinks: true
+    #classoption: [twocolumn,landscape] 
+    keep-tex: true
+    fig-pos: 'H'
+    tbl-cap-location: top
+    fig-cap-location: bottom
+    listings: false
+    code-block-bg: '#f6f8fa'
+    highlight-style: github
+    code-block-border-left: false
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    include-in-header:
+      text: |
+        \usepackage{ctex}    % CJK 包
+        \usepackage[backend=biber,style=gb7714-2015,gbnamefmt=lowercase]{biblatex}
+        \usepackage[dvipsnames]{xcolor}
+        \setCJKmainfont[AutoFakeBold = {2.25}]{宋体}
+        \setmainfont{Times New Roman} %英文字體調整
+        \usepackage{caption}
+        \DeclareCaptionLabelSeparator{bar}{ | }
+        \captionsetup[figure]{labelformat=simple, labelsep=bar,singlelinecheck=off, labelfont = bf}
+        \captionsetup[table]{labelformat=simple, labelsep=bar, labelfont = bf}
+
+---
+
+
+## Abstract
+
+An ischemic stroke occurs when the blood supply to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients, yet it is unclear what are the underlying mechanisms at the transcriptome level. To solve this problem, I perfom a RNA-seq analysis of ischemic stroke in aged (18-month-old) mouse brain, whose data were collected from the public database. Through assessing differential gene expression across injury status, it was found that downregulation of neurotransmitter transport and synaptic plasticity, with upregulation of  inflammatory cascade response in aged post-stroke, which may provide new insights into the transcriptional response to ischemic stroke.  
+
+![**Workflow**. The overall process of this project, from upstream data processing to downstream functional analysis.](./figure/Figure-1.pipeline.pdf)
+
+
+
+## Introduction
+
+Stroke, also known as cerebralvascular acident (CVA), is a serious neurological disease that can lead to severe disability and death. Stroke is the second leading cause of death in the world after ischemic heart disease, and has become the leading cause of death in China \cite{Liping2011Stroke}. The onset of stroke can be divided into two categories: ischemic stroke and hemorrhagic stroke. Ischemic stroke, which is the most common type of stroke, is caused by insufficient blood supply to the brain \cite{2015Endovascular}.
+
+In this study, I aimed to explore the impact of ischemic stroke  at the transcriptome level, trying to decode the transcriptional response to ischemic stroke in aged mouse brain.
+
+## Methods
+
+### Data Source
+
+Data for this study were obtained from the paper, Decoding the Transcriptional Response to Ischemic Stroke in Young and Aged Mouse Brain, published by Androvic et al. in Cell Reports in June 2020, which can be  accessible through GEO series accession number [GSE137482](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137482). 3 and 18 month-old C57Black/6 female mice were subjected to permanent middle cerebral artery occlusion (MCAO) to model cerebral ischemia. Parietal cortex tissue was collected 3 days after MCAO and total RNA was isolated using TRIZOL. Intact 3 and 18-month old female mice were used as controls. I selected six samples from the original data, three experimental and three control sample respectively ( [@tbl-samples]).
+
+
+|RUN|Sample|Group|
+| :-----------: | :------: | :-----: |
+|SRR10123774|Ctrl_18M_A|Ctrl|
+|SRR10123775|Ctrl_18M_B|Ctrl|
+|SRR10123776|Ctrl_18M_C|Ctrl|
+|SRR10123786|MCAO_18M_A|MCAO|
+|SRR10123787|MCAO_18M_B|MCAO|
+|SRR10123788|MCAO_18M_C|MCAO|
+
+: **Selected raw data for RNA-seq analysis** {#tbl-samples}
+
+### RNA-seq data analysis
+
+Raw RNA-Seq data from the SRA was dowloaded with *fastq-dump* v2.11.0 \cite{2010sra}. Adaptor sequences and low quality reads were removed using *Trim Galore* v0.6.7 \cite{felix_krueger_2021_5127899}. The remaining reads were aligned to GRCm38 using *Tophat* v2.1.1 with default parameters \cite{kimTopHat2AccurateAlignment2013}. Mapped reads were counted over Gencode vM8 gene annotation using *Cufflinks* v2.2.1 \cite{trapnellTranscriptAssemblyQuantification2010}. The RPKM (Reads Per Kilobase of transcript per Million reads mapped) values were normalized to TPM (Transcripts Per Kilobase Million) using the script, *FPKM2TPM.R*, to allow the comparison of gene expression between samples. The program *cuffdiff* with default parameters in the *Cufflinks* suite was used to calculate the fold-change and P-value of genes for comparison between samples \cite{trapnellTranscriptAssemblyQuantification2010}. Three biological replicates for MAO mice and normal aged mice were investigated to identify differentially expressed genes at the cut-off of |log2FC>1| and P-value <0.05. Utilizing the built-in R (v4.2.2) functions *prcomp* and *hclust* to perform Principal Component Analysis (PCA) and hierarchical clustering analysis. The R package from Bioconductor, *clusterProfiler* (v4.6.0)  was used to perform GO term and KEGG pathway enrichment analysis for differential gene expression \cite{yuClusterProfilerPackageComparing2012}.
+
+### Code availability
+
+All the shell-scripts and R-scripts used to perform data processing and analysis are deposited to the GitHub repository website ([https://github.com/Achuan-2/rna-seq-practice](https://github.com/Achuan-2/rna-seq-practice)).
+
+## Results
+
+### The data of ischemic mice and normal mice can be distinguished
+
+To provide an overview of the data, Principal Component Analysis (PCA)  and hierarchical clustering analysis were performed. As can be seen in [@fig-overview], the distances between groups were closer and the overall gene expression of the MAO (middle cerebral artery occlusion) group could be distinguished from those of control group.
+
+![**Data Overview**. **(A)** PCA plot showing global similarity of genes expression in control and MCAO samples. **(B)** Cluster Dendrogram based on Pearson distance showing similarity among control and MCAO samples](./figure/Figure-2.pdf){#fig-overview}
+
+
+
+
+### Ischemic aged mice have a large number of upregulated genes
+
+As is shown in [@fig-differential], after differential gene expression analysis of genes between groups, 1,551 differential genes were found in MAO mice compared to control mice (|log2FC|>1; p-value < 0.05). Moreover, the number of up-regulated genes was significantly higher than that of down-regulated genes (up-regulated: log2FC>1, down-regulated: log2FC<-1).
+
+![**Differential Gene Expression Analysis**. **(A) ** Differences in the number of up-regulated and down-regulated genes between MAO and  control mice (up-regulated: log2FC>1, down-regulated: log2FC<-1). **(B) ** Volcano plots showing differential gene expression between MAO and  control mice. **(C) ** Heatmap showing significantly differentially expressed genes between MAO and control mice (|log2FC|>1; p-value <0.05).](./figure/Figure-3.png){#fig-differential}
+
+
+### Ischemic stroke is accompanied with increased neuroinflammation and decreased neurotransmitter transport
+
+Through Gene Ontology (GO) enrichment analysis of up-regulated genes and down-regulated genes respectively, it was found that the GO Term of the up-regulated genes is significantly enriched in inflammatory response (such as regulation of immune effector process, leucocyte promotion, mononuclear cell promotion, myeloid leucocyte activation), cell-cell interactions (such as extraceller matrix organization, extraceller structure organization, cell subtract adhesion), cell migration (such as leukocyte migration, ameboidal type cell migration). On the other hand, gene associated with neurotransmitter transport and potassium ion channels et al., were downregulated ([@fig-go]).
+
+![**Gene Ontology Enrichment Analysis**. **(A)** Enrichment Map for enrichment result of up-regulated genes in MAO mice. **(B)** Enrichment Map for enrichment result of down-regulated genes in MAO mice. **(C)** Gene-Category Network for enrichment result of up-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed. **(D)** Gene-Category Network for enrichment result of down-regulated genes in MAO mice. Only the top 5 categories order by gene ratio are displayed.](./figure/Figure-4.pdf){#fig-go}
+
+
+## Discussion
+
+In this study, transcriptome analysis was carried out in aged post-stroke mice and normal mice. The results showed that the up-regulated genes in stroke mice focused on inflammatory cascade and peripheral leukocyte proliferation,  which are the strongest producers of reactive oxygen species (ROS) and matrix metallopeptidases (MMPs) and promote neuronal injury and BBB disruption \cite{allenOxidativeStressIts2009,streckerNeutrophilGranulocytesCerebral2017}. The down-regulated genes may be related to neurotransmitter transport and synaptic plasticity. Analysis results suggest that an increased neuroinflammation and infiltration of circulating immune cells may be one of the primary drivers for the exacerbated pathology in aged post-stroke mice.
+
+In conclusion, detailed insights into transcriptional response to stroke described in this study may contribute to our understanding of the interplay between stroke pathology and aging, and open avenues for the future search for effective therapeutic approaches.
+
+In addition, limited to time and server storage space, in terms of data, only the aged samples were analyzed, whereas the young samples were ignored. In terms of data analysis, Gene Set Enrichment Analysis (GSEA) and Gene Co-expression Network Analysis (WGCNA) has not been conducted. I hope there will be time to further study and improve the analysis ability of bioinfomatics in the future.
